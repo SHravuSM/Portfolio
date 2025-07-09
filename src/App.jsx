@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 import Footer from './components/Footer';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
+// import Contact from './components/Contact';
 import Skills from './components/Skills';
 import About from './components/About';
 import Hero from './components/Hero';
@@ -126,7 +126,7 @@ const App = () => {
       <About />
 
       {/* Contact Section */}
-      <Contact />
+      {/* <Contact /> */}
       
 
       {/* Footer */}

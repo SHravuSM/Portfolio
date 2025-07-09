@@ -155,7 +155,7 @@ export default function Projects() {
     ];
 
     return (
-        <section id="projects" className={`py-24 ${!light ? 'bg-black' : 'bg-white'}`}>
+        <section id="projects" className={`py-24 ${!light ? 'bg-black' : 'bg-red-500'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className={`text-4xl font-bold mb-4 ${!light ? "text-white " : 'text-black'}`}> My Featured Projects</h2>
@@ -164,15 +164,15 @@ export default function Projects() {
 
                 <div className="grid gap-12 md:grid-cols-2">
                     {projects.map((project, index) => (
-                        <div key={index} className="relative rounded-2xl overflow-hidden  shadow-xl group">
+                        <div key={index} className="relative rounded-2xl overflow-hidden shadow-xl group">
                             <img
                                 src={project.image}
                                 alt={project.title}
                                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                             />
                             <div className={`absolute inset-0 bg-opacity-60 transition-opacity duration-300 group-hover:bg-opacity-80 flex flex-col justify-end p-6 ${light ? 'bg-black' : 'bg-white'}`}>
-                                <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
-                                <p className="text-gray-200 text-sm mb-3">{project.description}</p>
+                                <h3 className="text-2xl font-bold text-red-500 mb-1 border">{project.title}</h3>
+                                <p className="text-gray-200 text-sm mb-3 border">{project.description}</p>
 
                                 <div className={`${!light ? "bg-white" : 'bg-black'} bg-opacity-10 backdrop-blur-md rounded-lg pt-4 mb-4`}>
                                     <h4 className={`${!light ? 'text-black' : "text-white"}  font-semibold text-lg mb-2`}>✨ Features:</h4>
