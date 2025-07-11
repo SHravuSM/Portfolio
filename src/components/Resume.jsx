@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Resume = () => {
     return (
         <StyledWrapper className=''>
-            <a href='https://drive.google.com/file/d/1si0izKXIIhwvGhtdjjrmFmzCVBr9rIPR/view' className="Documents-btn">
+            <a href='https://drive.google.com/file/d/1l3Z7gDre9x9Ho6dWX26CYciZT04kZTm5/view?usp=sharing' className="Documents-btn">
                 <span className="folderContainer">
                     <svg className="fileBack" width={146} height={113} viewBox="0 0 146 113" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 4C0 1.79086 1.79086 0 4 0H50.3802C51.8285 0 53.2056 0.627965 54.1553 1.72142L64.3303 13.4371C65.2799 14.5306 66.657 15.1585 68.1053 15.1585H141.509C143.718 15.1585 145.509 16.9494 145.509 19.1585V109C145.509 111.209 143.718 113 141.509 113H3.99999C1.79085 113 0 111.209 0 109V4Z" fill="url(#paint0_linear_117_4)" />
