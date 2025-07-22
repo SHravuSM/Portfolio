@@ -137,7 +137,6 @@ export default function Projects() {
                 'Streamlined rental flow'
             ],
             liveUrl: 'https://vihar.netlify.app',
-            image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=500&fit=crop'
         },
         {
             title: 'RFID Attendance System',
@@ -150,60 +149,88 @@ export default function Projects() {
                 'Modular backend structure'
             ],
             liveUrl: 'https://rfid-system-gecg.onrender.com',
-            image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&h=500&fit=crop'
-        }
+        },
+        {
+            title: 'Meow-Jerry',
+            description: 'RFID-powered attendance tracking system for government colleges, with live dashboards.',
+            technologies: ['React.js', 'Zustand', 'Node.js', 'Express.js', 'MongoDB'],
+            features: [
+                'Smooth typing experience',
+                'Key Tracking',
+                'Real-time work count and displaying WPM',
+                'Modular backend structure'
+            ],
+            liveUrl: 'https://meow-jerry.netlify.app/',
+        },
+        {
+            title: 'Some-Geeta',
+            description: 'RFID-powered attendance tracking system for government colleges, with live dashboards.',
+            technologies: ['React.js', 'Zustand', 'Node.js', 'Express.js', 'MongoDB'],
+            features: [
+                'Smooth typing experience',
+                'Key Tracking',
+                'Real-time work count and displaying WPM',
+                'Modular backend structure'
+            ],
+            liveUrl: 'https://somegeeta.netlify.app/',
+        },
+        {
+            title: 'Tic-Tac-Toe',
+            description: 'RFID-powered attendance tracking system for government colleges, with live dashboards.',
+            technologies: ['React.js', 'Zustand', 'Node.js', 'Express.js', 'MongoDB'],
+            features: [
+                'Smooth typing experience',
+                'Key Tracking',
+                'Real-time work count and displaying WPM',
+                'Modular backend structure'
+            ],
+            liveUrl: 'https://tic-tac-toe-shravu.netlify.app/',
+        },
     ];
 
     return (
-        <section id="projects" className={`py-24 ${!light ? 'bg-black' : 'bg-red-500'}`}>
+        <section id="projects" className={`py-24 ${!light ? 'bg-black' : 'bg-white'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className={`text-4xl font-bold mb-4 ${!light ? "text-white " : 'text-black'}`}> My Featured Projects</h2>
-                    <p className="text-lg text-gray-600">Real-world apps built with scalable architecture & modern UI/UX</p>
+                    <p className={`text-lg ${light ? 'text-black' : "text-white"}`}>Real-world apps built with scalable architecture & modern UI/UX</p>
                 </div>
 
                 <div className="grid gap-12 md:grid-cols-2">
                     {projects.map((project, index) => (
-                        <div key={index} className="relative rounded-2xl overflow-hidden shadow-xl group">
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                            <div className={`absolute inset-0 bg-opacity-60 transition-opacity duration-300 group-hover:bg-opacity-80 flex flex-col justify-end p-6 ${light ? 'bg-black' : 'bg-white'}`}>
-                                <h3 className="text-2xl font-bold text-red-500 mb-1 border">{project.title}</h3>
-                                <p className="text-gray-200 text-sm mb-3 border">{project.description}</p>
+                        <div key={index} className={` inset-0 h-96 rounded-2xl border-2   overflow-hidden shadow-xl group bg-opacity-60 transition-opacity duration-300 group-hover:bg-opacity-80 flex flex-col justify-end p-6 ${light ? 'bg-black/90' : 'bg-white'}`}>
+                            <h3 className="text-2xl font-bold text-blue-500 mb-1">{project.title}</h3>
+                            <p className={` ${!light ? "text-slate-500" : 'text-white'} text-sm mb-3`}>{project.description}</p>
 
-                                <div className={`${!light ? "bg-white" : 'bg-black'} bg-opacity-10 backdrop-blur-md rounded-lg pt-4 mb-4`}>
-                                    <h4 className={`${!light ? 'text-black' : "text-white"}  font-semibold text-lg mb-2`}>✨ Features:</h4>
-                                    <ul className="text-sm text-gray-200 space-y-1 list-disc list-inside">
-                                        {project.features.map((f, i) => (
-                                            <li className={`${light ? 'text-white' : 'text-black'}`} key={i}>{f}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {project.technologies.map((tech, idx) => (
-                                        <span
-                                            key={idx}
-                                            className={` bg-blue-500 ${!light ? "text-white" : 'text-black'} text-xs px-3 py-1 rounded-full font-medium backdrop-blur-sm`}
-                                        >
-                                            {tech}
-                                        </span>
+                            <div className={`${!light ? "bg-white" : 'bg-red/90'} bg-opacity-10 backdrop-blur-md rounded-lg pt-4 mb-4`}>
+                                <h4 className={`${!light ? 'text-black' : "text-white"}  font-semibold text-lg mb-2`}>✨ Features:</h4>
+                                <ul className={`text-sm text-gray-200 space-y-1 list-disc list-inside`}>
+                                    {project.features.map((f, i) => (
+                                        <li className={`${light ? 'text-white' : 'text-black'}`} key={i}>{f}</li>
                                     ))}
-                                </div>
-
-                                <a
-                                    href={project.liveUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition"
-                                >
-                                    View Live Project
-                                    <ExternalLink className="ml-2 w-4 h-4" />
-                                </a>
+                                </ul>
                             </div>
+
+                            <div className="flex flex-wrap gap-2 mb-4">
+                                {project.technologies.map((tech, idx) => (
+                                    <span
+                                        key={idx}
+                                        className={` bg-blue-500 ${!light ? "text-white" : 'text-black/90'} text-xs px-3 py-1 rounded-full font-medium backdrop-blur-sm`}
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <a
+                                href={project.liveUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition"
+                            >
+                                View Live Project
+                                <ExternalLink className="ml-2 w-4 h-4" />
+                            </a>
                         </div>
                     ))}
                 </div>
