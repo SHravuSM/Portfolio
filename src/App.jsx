@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import {
   Mail,
   Phone,
@@ -17,15 +17,16 @@ import {
   Menu,
   X,
   ChevronDown,
-  Star
-} from 'lucide-react';
-import Footer from './components/Footer';
-import Projects from './components/Projects';
+  Star,
+} from "lucide-react";
+import Footer from "./components/Footer";
+import Projects from "./components/Projects";
 // import Contact from './components/Contact';
-import Skills from './components/Skills';
-import About from './components/About';
-import Hero from './components/Hero';
-import { STORE } from './context/AppContext';
+import Skills from "./components/Skills";
+import About from "./components/About";
+import Hero from "./components/Hero";
+import { STORE } from "./context/AppContext";
+import Experience from "./components/Experience";
 
 const App = () => {
   const { setActiveSection, light } = STORE();
@@ -33,8 +34,8 @@ const App = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
-      const currentSection = sections.find(section => {
+      const sections = ["home", "about", "skills", "projects", "contact"];
+      const currentSection = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
@@ -45,8 +46,8 @@ const App = () => {
       if (currentSection) setActiveSection(currentSection);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // const SkillBar = ({ skill, level }) => (
@@ -65,7 +66,11 @@ const App = () => {
   // );
 
   return (
-    <div className={`min-h-screen font-any11 font-bold transition-colors duration-500 ease-initial ${light ? 'text-black bg-white' : 'text-white bg-black'}`}>
+    <div
+      className={`min-h-screen font-any11 font-bold transition-colors duration-500 ease-initial ${
+        light ? "text-black bg-white" : "text-white bg-black"
+      }`}
+    >
       {/* Navigation */}
       {/* <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,7 +123,7 @@ const App = () => {
 
       {/* Skills Section */}
       <Skills />
-
+      <Experience />
       {/* Projects Section */}
       <Projects />
 
@@ -127,14 +132,11 @@ const App = () => {
 
       {/* Contact Section */}
       {/* <Contact /> */}
-      
 
       {/* Footer */}
       <Footer />
-
-      
-
-    </div>)
+    </div>
+  );
 };
 
 export default App;

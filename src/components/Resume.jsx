@@ -4,7 +4,7 @@ const Resume = () => {
   return (
     <StyledWrapper className="">
       <a
-        href="https://drive.google.com/file/d/1kYGoHmw0__myCzInIrgfAyj2rio6hYvC/view?usp=sharing"
+        href="https://drive.google.com/file/d/1rmJYZbofp4k-wH_lt6SG9374m4b9IjQ6/view?usp=sharing"
         className="Documents-btn"
       >
         <span className="folderContainer">

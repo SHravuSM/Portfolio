@@ -1,142 +1,174 @@
-import React from 'react'
-import {
-    Mail,
-    Phone,
-    MapPin,
-    Github,
-    Linkedin,
-    ExternalLink,
-    Code,
-    Database,
-    Server,
-    User,
-    Briefcase,
-    GraduationCap,
-    Award,
-    Send,
-    Menu,
-    X,
-    ChevronDown,
-    Star
-} from 'lucide-react';
-import { STORE } from '../context/AppContext';
+import React from "react";
+import { Code, Database, Server, Briefcase } from "lucide-react";
+import { STORE } from "../context/AppContext";
 
 export default function Skills() {
-    const { light } = STORE();
-    const skills = {
-        frontend: [
-            { name: 'HTML5', level: 95 },
-            { name: 'CSS3', level: 85 },
-            { name: 'JavaScript (ES6+)', level: 85 },
-            { name: 'React.js', level: 90 },
-            { name: 'Tailwind CSS', level: 90 },
-        ],
-        backend: [
-            { name: 'Node.js', level: 80 },
-            { name: 'Express.js', level: 80 },
-            { name: 'REST APIs', level: 85 },
-            { name: 'JWT Authentication', level: 75 },
-            { name: 'Modular Architecture', level: 80 }
-        ],
-        database: [
-            { name: 'MongoDB', level: 80 },
-            { name: 'Firebase Firestore', level: 85 },
-            { name: 'MySQL', level: 70 },
-            { name: 'SQL', level: 75 }
-        ],
-        tools: [
-            { name: 'Context API', level: 90 },
-            { name: 'Zustand', level: 85 },
-            { name: 'Mongoose', level: 75 },
-            { name: 'Postman', level: 80 },
-            { name: 'Git & GitHub', level: 85 },
-        ]
-    };
-    return (
-        <section id="skills" className="py-20 ">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className={`text-3xl md:text-4xl font-bold ${light? 'text-gray-900' : 'text-white'} mb-4`}>Technical Skills</h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-white mx-auto mb-6"></div>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Proficient in modern web technologies with a focus on creating scalable, efficient solutions
-                    </p>
-                </div>
+  const { light } = STORE();
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {/* Frontend */}
-                    <div className={`p-6 rounded-md shadow-md backdrop-blur-lg ${!light ? 'bg-black/5' : 'bg-white'} border border-white/10 max-w-sm w-full`}>
-                        <div className="flex items-center mb-4">
-                            <Code className="text-blue-600 mr-3" size={24} />
-                            <h3 className="text-xl font-bold text-blue-600">Frontend</h3>
-                        </div>
-                        <div className="flex flex-wrap gap-2 ">
-                            {skills.frontend.map((skill) => (
-                                <span
-                                    key={skill.name}
-                                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
-                                >
-                                    {skill.name}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
+  const skills = {
+    frontend: [
+      { name: "Next.js" },
+      { name: "React.js" },
+      { name: "TypeScript" },
+      { name: "JavaScript (ES6+)" },
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "CSS Grid & Flexbox" },
+      { name: "Responsive Web Design" },
+      { name: "Mobile-First Development" },
+      { name: "Shadcn/UI" },
+      { name: "Tailwind CSS" },
+      { name: "Bootstrap" },
+      { name: "Styled Components" },
+    ],
 
-                    {/* Backend */}
-                    <div className={`p-6 rounded-md shadow-md backdrop-blur-lg ${!light ? 'bg-black/5' : 'bg-white'} border border-white/10 max-w-sm w-full`}>
-                        <div className="flex items-center mb-4">
-                            <Server className="text-green-600 mr-3" size={24} />
-                            <h3 className="text-xl font-bold text-green-600">Backend</h3>
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                            {skills.backend.map((skill) => (
-                                <span
-                                    key={skill.name}
-                                    className="bg-green-900 text-white px-3 py-1 rounded-full text-sm font-medium"
-                                >
-                                    {skill.name}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
+    backend: [
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "REST APIs" },
+      { name: "JWT Authentication" },
+      { name: "Modular Architecture" },
+      { name: "Redis" },
+      { name: "SQLite" },
+      { name: "Web Scraping (Puppeteer)" },
+      { name: "Performance Optimization" },
+      { name: "Code Splitting" },
+      { name: "Lazy Loading" },
+      { name: "React.memo / useMemo / useCallback" },
+      { name: "Virtualization (React Window)" },
+    ],
 
-                    {/* Database */}
-                    <div className={`p-6 rounded-md shadow-md backdrop-blur-lg ${!light ? 'bg-black/5' : 'bg-white'} border border-white/10 max-w-sm w-full`}>
-                        <div className="flex items-center mb-4">
-                            <Database className="text-purple-600 mr-3" size={24} />
-                            <h3 className="text-xl font-bold text-purple-600">Database</h3>
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                            {skills.database.map((skill) => (
-                                <span
-                                    key={skill.name}
-                                    className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
-                                >
-                                    {skill.name}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
+    database: [
+      { name: "MongoDB" },
+      { name: "Firebase Firestore" },
+      { name: "MySQL" },
+      { name: "SQL" },
+    ],
 
-                    {/* Tools */}
-                    <div className={`p-6 rounded-md shadow-md backdrop-blur-lg ${!light ? 'bg-black/5' : 'bg-white'} border border-white/10 max-w-sm w-full`}>
-                        <div className="flex items-center mb-4">
-                            <Briefcase className="text-[#FA9810] mr-3" size={24} />
-                            <h3 className="text-xl font-bold text-[#FA9810]">Tools & Libraries</h3>
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                            {skills.tools.map((skill) => (
-                                <span
-                                    key={skill.name}
-                                    className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium"
-                                >
-                                    {skill.name}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+    tools: [
+      { name: "Redux Toolkit" },
+      { name: "Zustand" },
+      { name: "TanStack React Query" },
+      { name: "Context API" },
+      { name: "Git & GitHub" },
+      { name: "CI/CD Basics" },
+      { name: "Postman" },
+      { name: "Netlify" },
+      { name: "Vite" },
+      { name: "Vercel" },
+      { name: "Chrome DevTools" },
+      { name: "Redux DevTools" },
+      { name: "PWA Configuration" },
+      { name: "Internationalization – next-intl" },
+    ],
+  };
+
+  return (
+    <section id="skills" className="py-20 relative">
+      {/* Subtle background glow */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 relative">
+        <div className="text-center mb-16">
+          <h2
+            className={`text-4xl font-extrabold tracking-tight ${
+              light ? "text-gray-900" : "text-white"
+            }`}
+          >
+            Technical Skills
+          </h2>
+
+          {/* Futuristic underline */}
+          <div className="w-32 h-[2px] mx-auto my-4 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
+
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Built around modern web technologies, performance optimization, and
+            elegant UI engineering.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Category Card Generator */}
+          {[
+            {
+              title: "Frontend",
+              icon: Code,
+              color: "blue",
+              items: skills.frontend,
+            },
+            {
+              title: "Backend",
+              icon: Server,
+              color: "green",
+              items: skills.backend,
+            },
+            {
+              title: "Database",
+              icon: Database,
+              color: "purple",
+              items: skills.database,
+            },
+            {
+              title: "Tools & Libraries",
+              icon: Briefcase,
+              color: "orange",
+              items: skills.tools,
+            },
+          ].map((group) => (
+            <div
+              key={group.title}
+              className={`
+                relative p-6 rounded-xl backdrop-blur-xl transition-all duration-300 
+                border hover:scale-[1.03] hover:shadow-xl
+                ${
+                  light
+                    ? "bg-white/70 border-gray-200"
+                    : "bg-white/5 border-white/10"
+                }
+                before:absolute before:inset-0 before:rounded-xl before:z-[-1]
+                before:bg-gradient-to-br before:opacity-20
+                before:from-${group.color}-500/40 before:to-transparent
+              `}
+            >
+              <div className="flex items-center mb-4">
+                <group.icon
+                  className={`text-${group.color}-500 drop-shadow-md`}
+                  size={26}
+                />
+                <h3
+                  className={`ml-3 text-xl font-semibold text-${group.color}-500`}
+                >
+                  {group.title}
+                </h3>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((skill) => (
+                  <span
+                    key={skill.name}
+                    className={`
+                      px-3 py-1 rounded-full text-xs font-medium tracking-wide
+                      transition-all duration-200
+                      border border-${group.color}-500/20
+                      ${
+                        light
+                          ? `bg-${group.color}-50 text-${group.color}-700`
+                          : `bg-${group.color}-500/10 text-${group.color}-300`
+                      }
+                      hover:bg-${group.color}-500/20 hover:border-${
+                      group.color
+                    }-500/40
+                      hover:shadow-lg hover:shadow-${group.color}-500/10
+                    `}
+                  >
+                    {skill.name}
+                  </span>
+                ))}
+              </div>
             </div>
-        </section>
-    )
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
